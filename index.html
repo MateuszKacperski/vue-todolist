@@ -43,7 +43,7 @@
                 <button type="button" class="btn-close" @click="removeTask(list.id)"></button>
             </li>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Aggiungi alla lista" v-model.trim="taskContent">
+                <input type="text" class="form-control" placeholder="Aggiungi alla lista" v-model.trim="taskContent" @keyup.enter="addTask">
                 <button class="btn btn-outline-secondary" type="button" @click="addTask" ><i class="fa-solid fa-plus"></i></button>
               </div>
           </ul>
