@@ -37,9 +37,17 @@
 
     <div id="root">
 
-        <ul class="list-group container">
+        <h1 class="text-center">Cose da fare</h1>
+
+        <ul class="list-group container mt-5">
             <li v-for="list in toDoList" class="list-group-item d-flex justify-content-between">
-                {{list.text}}
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" v-model="list.done">
+                    <label class="form-check-label" :class="{'text-decoration-line-through': list.done}" >
+                        {{list.text}}
+                    </label>
+                </div>
+                
                 <button type="button" class="btn-close" @click="removeTask(list.id)"></button>
             </li>
             <div class="input-group mb-3">
