@@ -38,7 +38,10 @@
     <div id="root">
 
         <ul class="list-group container">
-            <li v-for="list in toDoList" class="list-group-item">{{list.text}}</li>
+            <li v-for="list in toDoList" class="list-group-item d-flex justify-content-between">
+                {{list.text}}
+                <button type="button" class="btn-close" @click="removeTask(list.id)"></button>
+            </li>
           </ul>
        
     </div>    

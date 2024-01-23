@@ -6,7 +6,11 @@ const app = createApp({
     data: () => ({
         toDoList,
     }),
-    
+    methods:{
+        removeTask(id) {
+            this.toDoList = this.toDoList.filter(list => id !== list.id);
+        }
+    }
 })
 
 
