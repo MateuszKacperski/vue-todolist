@@ -54,8 +54,9 @@
                 <input type="text" class="form-control" placeholder="Aggiungi alla lista" v-model.trim="taskContent" @keyup.enter="addTask">
                 <button class="btn btn-outline-secondary" type="button" @click="addTask" ><i class="fa-solid fa-plus"></i></button>
               </div>
+              <h3 v-if="toDoList.length === 0" class="text-center mb-3">Non ci sono task</h3>
           </ul>
-       
+          
     </div>    
 
 </body>
